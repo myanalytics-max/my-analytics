@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Real-Time Analytics Dashboard</h1>
+            <p>Track your website visitors in real-time</p>
+        </header>
+        <div class="stats-grid">
+            <div class="stat-card"><h3>Total Visits</h3><div class="stat-number" id="totalVisits">0</div></div>
+            <div class="stat-card"><h3>Unique Visitors</h3><div class="stat-number" id="uniqueVisitors">0</div></div>
+            <div class="stat-card"><h3>Today</h3><div class="stat-number" id="todayVisits">0</div></div>
+            <div class="stat-card"><h3>Bounce Rate</h3><div class="stat-number" id="bounceRate">0%</div></div>
+        </div>
+        <div class="charts-row">
+            <div class="chart-container"><canvas id="visitsChart"></canvas></div>
+            <div class="chart-container"><canvas id="devicesChart"></canvas></div>
+        </div>
+        <div class="recent-visitors"><h3>Recent Visitors</h3><div id="visitorsList"></div></div>
+        <div class="embed-code">
+            <h3>Embed on Your Site</h3>
+            <textarea readonly id="trackingCode" rows="6"></textarea>
+            <button onclick="copyTrackingCode()">📋 Copy Code</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
